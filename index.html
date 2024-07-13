@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDURAR Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="logo">
+                <img src="logo.png" alt="iDURAR">
+                <h1>iDURAR</h1>
+            </div>
+            <div class="features">
+                <p>Manage Your Company With :</p>
+                <ul>
+                    <li>All In One Tool</li>
+                    <span>Run And Scale Your ERP CRM Apps</span>
+                    <li>Easily Add And Manage Your Services</li>
+                    <span>It Brings Together Your Invoice Clients And Leads</span>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="za">South Africa</option>
+                    <!-- Add more country options as needed -->
+                </select>
+                <button type="submit">Register</button>
+                <p>Or <a href="#">Already Have Account Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
