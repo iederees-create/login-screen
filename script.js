@@ -1,15 +1,18 @@
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const country = document.getElementById('country').value;
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Country:', country);
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
 
-    // Here you can add your form submission logic
+        // You can add validation or authentication logic here
+
+        if (username === 'admin' && password === 'password') {
+            window.location.href = 'dashboard.html';
+        } else {
+            alert('Invalid username or password');
+        }
+    });
 });
