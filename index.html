@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientPulse Login</title>
+    <title>ClientPulse Sign Up</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // Here you would typically send the token to your server for validation and login
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "YOUR_GOOGLE_CLIENT_ID",
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("googleSignUpButton"),
+                { theme: "outline", size: "large" }  // customization attributes
+            );
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -39,6 +57,7 @@
                 
                 <button type="submit">Register</button>
             </form>
+            <div id="googleSignUpButton"></div>
             <p>Or <a href="login.html">Already Have Account Login</a></p>
         </div>
     </div>
