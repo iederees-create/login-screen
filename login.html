@@ -1,36 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientPulse Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="left-panel">
-            <img src="https://media.istockphoto.com/id/1314491013/vector/heart-cardiogram-line-icon-vector-illustration-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=TyWfzdG5SykehwrxRvBy9deP1zdbqKBoMntz_quSfpI=" alt="Logo" class="logo">
-            <h2>Manage Your Company With :</h2>
-            <ul>
-                <li>All In One Tool</li>
-                <li>Run And Scale Your ERP CRM Apps</li>
-                <li>Easily Add And Manage Your Services</li>
-                <li>It Brings Together Your Invoice Clients And Leads</li>
-            </ul>
-        </div>
-        <div class="right-panel">
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">Login</button>
-            </form>
-            <p>Or <a href="index.html">Create an Account</a></p>
-        </div>
-    </div>
-</body>
-</html>
+document.getElementById("loginForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Hard-coded credentials for testing
+    const validUsername = "testuser";
+    const validPassword = "testpassword";
+
+    if(username === validUsername && password === validPassword) {
+        alert("Login successful!");
+        window.location.href = "dashboard.html"; // Redirect to the dashboard
+    } else {
+        alert("Invalid username or password.");
+    }
+});
+
+function handleCredentialResponse(response) {
+    const responsePayload = decodeJwtResponse(response.credential);
+    console.log("ID: " + responsePayload.sub);
+    console.log('Full Name: ' + responsePayload.name);
+    console.log('Given Name: ' + responsePayload.given_name);
+    console.log('Family Name: ' + responsePayload.family_name);
+    console.log("Image URL: " + responsePayload.picture);
+    console.log("Email: " + responsePayload.email);
+
+    // Here you would typically send the token to your server for authentication
+    alert("Google Sign-In successful!");
+    window.location.href = "dashboard.html"; // Redirect to the dashboard
+}
+
+function decodeJwtResponse(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+}
