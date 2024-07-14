@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const showLoginFormButton = document.getElementById('showLoginForm');
-    const showSignUpFormButton = document.getElementById('showSignUpForm');
+    const showLoginFormLink = document.getElementById('showLoginForm');
+    const showSignUpFormLink = document.getElementById('showSignUpForm');
     const loginFormContainer = document.getElementById('loginFormContainer');
     const signUpFormContainer = document.getElementById('signUpFormContainer');
     const loginForm = document.getElementById('loginForm');
     const signUpForm = document.getElementById('signUpForm');
 
-    showLoginFormButton.addEventListener('click', function () {
+    showLoginFormLink.addEventListener('click', function (event) {
+        event.preventDefault();
         signUpFormContainer.style.display = 'none';
         loginFormContainer.style.display = 'block';
     });
 
-    showSignUpFormButton.addEventListener('click', function () {
+    showSignUpFormLink.addEventListener('click', function (event) {
+        event.preventDefault();
         loginFormContainer.style.display = 'none';
         signUpFormContainer.style.display = 'block';
     });
