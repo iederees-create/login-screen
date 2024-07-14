@@ -53,3 +53,7 @@ button {
 button:hover {
     background-color: #425b76;
 }
+
+.google-signin {
+    margin-top: 20px;
+}
