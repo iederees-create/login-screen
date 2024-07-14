@@ -11,6 +11,7 @@
         <div class="login-initial">
             <h2>Welcome to ClientPulse</h2>
             <button id="showLoginForm">Already have an account? Login Here</button>
+            <button id="showSignUpForm">Don't have an account? Sign Up Here</button>
         </div>
         <div class="login-form" id="loginFormContainer" style="display: none;">
             <h2>Login to ClientPulse</h2>
@@ -24,6 +25,20 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="signup-form" id="signUpFormContainer" style="display: none;">
+            <h2>Sign Up for ClientPulse</h2>
+            <form id="signUpForm">
+                <div class="form-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" id="newUsername" name="newUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                </div>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
     </div>
