@@ -10,59 +10,37 @@
     <div class="container">
         <div class="left">
             <div class="logo">
-                <img src="logo.png" alt="ClientPulse Logo">
+                <img src="https://t3.ftcdn.net/jpg/01/63/99/04/360_F_163990416_ZPGpp53PzyywU87iGEC7CJr4LCQ4Cnbc.jpg" alt="ClientPulse Logo">
             </div>
             <h2>Manage Your Company With :</h2>
             <ul>
                 <li>All In One Tool</li>
                 <li>Run And Scale Your ERP CRM Apps</li>
                 <li>Easily Add And Manage Your Services</li>
-                <li>It Brings Together Your Invoice Clients And Leads</li>
             </ul>
         </div>
         <div class="right">
-            <div class="form-container">
-                <div class="login-form" id="loginFormContainer">
-                    <h2>Sign Up</h2>
-                    <form id="signUpForm">
-                        <div class="form-group">
-                            <label for="newUsername">Name</label>
-                            <input type="text" id="newUsername" name="newUsername" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="newPassword">Password</label>
-                            <input type="password" id="newPassword" name="newPassword" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" name="country" required>
-                        </div>
-                        <button type="submit">Register</button>
-                    </form>
-                    <p>Or <a href="#" id="showLoginForm">Already Have Account Login</a></p>
-                </div>
-                <div class="login-form" id="loginFormContainer" style="display: none;">
-                    <h2>Login to ClientPulse</h2>
-                    <form id="loginForm">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" required>
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                    <p>Don't have an account? <a href="#" id="showSignUpForm">Sign Up Here</a></p>
-                </div>
-            </div>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="ZA">South Africa</option>
+                    <!-- Add more country options here -->
+                </select>
+                
+                <button type="submit">Register</button>
+            </form>
+            <p>Or <a href="login.html">Already Have Account Login</a></p>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
