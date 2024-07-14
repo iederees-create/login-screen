@@ -1,7 +1,8 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
 }
 
 .container {
@@ -15,25 +16,65 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .left {
-    background-color: #f0f3f5;
-    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
 }
 
 .right {
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: #f7f9fc;
 }
 
 .logo img {
-    max-width: 100%;
+    width: 200px;
     height: auto;
 }
 
 h2 {
-    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 ul {
@@ -42,58 +83,6 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
-}
-
-.form-container {
-    max-width: 400px;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #003f91;
-}
-
-p {
-    margin-top: 20px;
-}
-
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    margin: 10px 0;
+    color: #555;
 }
