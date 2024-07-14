@@ -86,3 +86,8 @@ ul li {
     margin: 10px 0;
     color: #555;
 }
+
+/* Google sign-in button styling */
+#googleSignUpButton {
+    margin-top: 15px;
+}
