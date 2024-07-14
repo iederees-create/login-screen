@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClientPulse Login</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="login.js" defer></script>
 </head>
 <body>
     <div class="login-container">
@@ -22,17 +20,7 @@
             </div>
             <button type="submit">Login</button>
         </form>
-        <div class="google-signin">
-            <h3>Or Sign in with Google</h3>
-            <div id="g_id_onload"
-                data-client_id="537464167456-carib6gvidv3qrji872i5glenpfqe9oc.apps.googleusercontent.com"
-                data-context="signin"
-                data-ux_mode="popup"
-                data-callback="handleCredentialResponse"
-                data-auto_prompt="false">
-            </div>
-            <div class="g_id_signin" data-type="standard"></div>
-        </div>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>
