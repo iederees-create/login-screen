@@ -8,38 +8,38 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         function handleCredentialResponse(response) {
-            console.log("Encoded JWT ID token: " + response.credential);
-            // Here you would typically send the token to your server for validation and login
+            console.log('Encoded JWT ID token: ' + response.credential);
+            // TODO: Send the ID token to your server for validation and user authentication
         }
 
         window.onload = function () {
             google.accounts.id.initialize({
-                client_id: "YOUR_GOOGLE_CLIENT_ID",
+                client_id: '537464167456-carib6gvidv3qrji872i5glenpfqe9oc.apps.googleusercontent.com',
                 callback: handleCredentialResponse
             });
             google.accounts.id.renderButton(
-                document.getElementById("googleSignUpButton"),
-                { theme: "outline", size: "large" }  // customization attributes
+                document.getElementById('googleSignInDiv'),
+                { theme: 'outline', size: 'large' } // customization attributes
             );
+            google.accounts.id.prompt(); // display the One Tap dialog
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <div class="left">
-            <div class="logo">
-                <img src="https://media.istockphoto.com/id/1314491013/vector/heart-cardiogram-line-icon-vector-illustration-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=TyWfzdG5SykehwrxRvBy9deP1zdbqKBoMntz_quSfpI=" alt="ClientPulse Logo">
-            </div>
+        <div class="left-panel">
+            <img src="https://media.istockphoto.com/id/1314491013/vector/heart-cardiogram-line-icon-vector-illustration-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=TyWfzdG5SykehwrxRvBy9deP1zdbqKBoMntz_quSfpI=" alt="Logo" class="logo">
             <h2>Manage Your Company With :</h2>
             <ul>
                 <li>All In One Tool</li>
                 <li>Run And Scale Your ERP CRM Apps</li>
                 <li>Easily Add And Manage Your Services</li>
+                <li>It Brings Together Your Invoice Clients And Leads</li>
             </ul>
         </div>
-        <div class="right">
+        <div class="right-panel">
             <h2>Sign Up</h2>
-            <form>
+            <form id="signup-form">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -52,12 +52,12 @@
                 <label for="country">Country</label>
                 <select id="country" name="country" required>
                     <option value="ZA">South Africa</option>
-                    <!-- Add more country options here -->
+                    <!-- Add more country options as needed -->
                 </select>
                 
                 <button type="submit">Register</button>
             </form>
-            <div id="googleSignUpButton"></div>
+            <div id="googleSignInDiv"></div>
             <p>Or <a href="login.html">Already Have Account Login</a></p>
         </div>
     </div>
