@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const showLoginFormButton = document.getElementById('showLoginForm');
+    const loginFormContainer = document.getElementById('loginFormContainer');
     const loginForm = document.getElementById('loginForm');
+
+    showLoginFormButton.addEventListener('click', function () {
+        loginFormContainer.style.display = 'block';
+    });
 
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
